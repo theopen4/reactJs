@@ -22,19 +22,40 @@
             return (<div>Hello OpenClassrooms 👋</div>)
         }
         function Header() {
-        return (<h1>La maison jungle</h1>)
+            const text = "La maison jungle"
+
+        return (<h1>{text.toUpperCase()}</h1>)
         }
         function Description() {
-            return (<p>Ici achetez toutes les plantes dont vous avez toujours rêvé 🌵🌱🎍</p>)
+            const text = "Ici achetez toutes les plantes dont vous avez toujours rêvées"
+            const emojis = "🤑🤑🤑"
+            return (<p>{ text.slice(0, 11) + emojis }</p>)
         }
         function Banner() {
             return (<div>
                 <Header />
                 <Description />
-            </div>)
+            </div>)    
+        }
+        function Cart(){
+            const prixMonstera = 8;
+            const prixLiere = 10;
+            const prixBouquet = 15;
+            const totalPanier = prixMonstera + prixLiere + prixBouquet; 
+            return (
+                <div>
+                    <h3>Panier</h3>
+                    <ul>
+                        <li>un monstera {prixMonstera}</li>
+                        <li>un liere {prixLiere}</li>
+                        <li>un bouquet de fleur{prixBouquet}</li>
+                    </ul>
+                    <p>le total du panier est de {totalPanier}</p>
+               </div>
+            )
         }
 
-        ReactDOM.render(<Banner/>, document.getElementById("root"))
+        ReactDOM.render(<React.Fragment><Banner/>, <Cart/></React.Fragment>, document.getElementById("root"))
         ReactDOM.render(<MyComponent />, document.getElementById("react-goes-here"))
         console.log(Header)
     </script>
