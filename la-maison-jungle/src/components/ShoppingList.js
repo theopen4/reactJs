@@ -29,5 +29,5 @@ function ShoppingList(){
 }
 export default ShoppingList;
 
-// {plant.isBestSale && plant.category === "classique" && <span>🔥</span>}
+// {plant.isBestSale && plant.category === "classique" && <span>🔥</span>}k
 // {(plant.isBestSale || plant.category === "classique") && <span>🔥</span>}
