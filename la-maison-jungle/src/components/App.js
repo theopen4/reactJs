@@ -4,11 +4,12 @@ import '../styles/Banner.css';
 import '../styles/Cart.css';
 import Cart from './Cart';
 import Banner from "./Banner";
+import ShoppingList from './ShoppingList';
 
 function App() {
   return (
    <div><Banner/>,
-   <Cart/> </div> 
+   <Cart/>, <ShoppingList/> </div> 
   );
 }
 
