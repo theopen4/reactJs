@@ -19,6 +19,7 @@ function ShoppingList(){
 					<li key={plant.id} className='lmj-plant-item'>
 						{plant.name}
 						{plant.isSpecialOffer && <div className='lmj-sales'>Soldes</div>}
+						
 					</li>
 				))}
 			</ul>
