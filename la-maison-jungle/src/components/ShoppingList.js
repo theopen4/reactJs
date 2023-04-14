@@ -1,4 +1,5 @@
 import { plantList } from '../datas/plantList'
+import CareScale from './CareScale'
 function ShoppingList(){
     const categories = plantList.reduce(
 		(acc, plant) =>
