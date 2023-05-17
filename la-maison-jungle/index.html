@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="root"></div>
+     <div id="react-goes-here">
+        
+        <!-- Le contenu de cet élément HTML sera remplacé par mes composants React -->
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function MyComponent() {
+            return (<div>Hello OpenClassrooms 👋</div>)
+        }
+        function Header() {
+            const text = "La maison jungle"
+
+        return (<h1>{text.toUpperCase()}</h1>)
+        }
+        function Description() {
+            const text = "Ici achetez toutes les plantes dont vous avez toujours rêvées"
+            const emojis = "🤑🤑🤑"
+            return (<p>{ text.slice(0, 11) + emojis }</p>)
+        }
+        function Banner() {
+            return (<div>
+                <Header />
+                <Description />
+            </div>)    
+        }
+        function Cart(){
+            const prixMonstera = 8;
+            const prixLiere = 10;
+            const prixBouquet = 15;
+            const totalPanier = prixMonstera + prixLiere + prixBouquet; 
+            return (
+                <div>
+                    <h3>Panier</h3>
+                    <ul>
+                        <li>un monstera {prixMonstera}</li>
+                        <li>un liere {prixLiere}</li>
+                        <li>un bouquet de fleur{prixBouquet}</li>
+                    </ul>
+                    <p>le total du panier est de {totalPanier}</p>
+               </div>
+            )
+        }
+
+        ReactDOM.render(<React.Fragment><Banner/>, <Cart/></React.Fragment>, document.getElementById("root"))
+        ReactDOM.render(<MyComponent />, document.getElementById("react-goes-here"))
+        console.log(Header)
+    </script>
+
+</body>
+</html>
